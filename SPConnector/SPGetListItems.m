@@ -117,20 +117,20 @@ NSString * const SPListItemDefaultContentTypeClassKey = @"kDefaultListItem";
     }];
     
     NSPredicate *predicate = self.predicate;
-    if (self.parentFileRef)
-    {
-        NSPredicate *parentRefPred = [NSPredicate predicateWithFormat:@"FileDirRef = %@", self.parentFileRef];
-        
-        if (predicate)
-        {
-            NSArray *subpredicates = [NSArray arrayWithObjects:predicate, parentRefPred, nil];
-            predicate = [[NSCompoundPredicate alloc] initWithType:NSAndPredicateType subpredicates:subpredicates];
-        }
-        else
-        {
-            predicate = parentRefPred;
-        }
-    }
+//    if (self.parentFileRef)
+//    {
+//        NSPredicate *parentRefPred = [NSPredicate predicateWithFormat:@"FileDirRef = %@", self.parentFileRef];
+//        
+//        if (predicate)
+//        {
+//            NSArray *subpredicates = [NSArray arrayWithObjects:predicate, parentRefPred, nil];
+//            predicate = [[NSCompoundPredicate alloc] initWithType:NSAndPredicateType subpredicates:subpredicates];
+//        }
+//        else
+//        {
+//            predicate = parentRefPred;
+//        }
+//    }
     self.predicate = predicate;
 }
 
